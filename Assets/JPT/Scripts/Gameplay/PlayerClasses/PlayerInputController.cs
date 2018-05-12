@@ -25,19 +25,16 @@ namespace JPT.Gameplay.PlayerClasses
             if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 m_JumpInputEvent.Invoke();
-                Debug.Log("GAME_LOG: Pushed jump button");
             }
 
             if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 m_FireInputEvent.Invoke();
-                print("GAME_LOG: Pushed fire1 button");
             }
 
             if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 m_TakeInputEvent?.Invoke();
-                print("GAME+LOG: Take fire2 button");
             }
         }
     }

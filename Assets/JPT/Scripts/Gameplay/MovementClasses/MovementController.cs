@@ -39,13 +39,10 @@ namespace JPT.Gameplay.MovementClasses
             var overlappedCollider = Physics2D.OverlapCircle(m_CheckGroundTransform.position, m_OverlapRadius, m_GroundMask);
             if (!overlappedCollider)
             {
-                Debug.Log("Cannot jump");
                 return;
             }
 
             m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
-
-            Debug.Log("GAME_LOG: player jump");
         }
 
         public void FixedUpdate()
