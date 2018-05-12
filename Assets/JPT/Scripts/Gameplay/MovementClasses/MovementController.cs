@@ -23,6 +23,15 @@ namespace JPT.Gameplay.MovementClasses
         {
             var velocity = new Vector2(value * m_Speed * Time.fixedDeltaTime, m_Rigidbody2D.velocity.y);
 
+            if (value < 0)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            if (value > 0)
+            {
+                transform.localScale = Vector3.one;
+            }
+
             m_Rigidbody2D.velocity = velocity;
         }
 
