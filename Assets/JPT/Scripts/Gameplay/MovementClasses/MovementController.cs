@@ -10,6 +10,7 @@ namespace JPT.Gameplay.MovementClasses
         [SerializeField] private float m_JumpForce = 0f;
 
         [Space]
+        [SerializeField] private LayerMask m_GroundMask = -1;
         [SerializeField] private Transform m_CheckGroundTransform = null;
         [SerializeField] private float m_OverlapRadius = 0f;
 
@@ -27,7 +28,7 @@ namespace JPT.Gameplay.MovementClasses
 
         public void Jump()
         {
-            var overlappedCollider = Physics2D.OverlapCircle(m_CheckGroundTransform.position, m_OverlapRadius, 1 << LayerMask.NameToLayer("Platform"));
+            var overlappedCollider = Physics2D.OverlapCircle(m_CheckGroundTransform.position, m_OverlapRadius, m_GroundMask);
             if (!overlappedCollider)
             {
                 Debug.Log("Cannot jump");

@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 70033375231201874}
   - component: {fileID: 212384595655814718}
   - component: {fileID: 50576841076263310}
+  - component: {fileID: 247781318179402394}
   - component: {fileID: 114602481339208824}
   - component: {fileID: 114807397317353236}
   - component: {fileID: 114454364428344408}
-  - component: {fileID: 247781318179402394}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4228073790552622}
   - component: {fileID: 58859294630489678}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4276310944951150}
   - component: {fileID: 58227959525560110}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: CheckAttack
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -249,6 +249,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  m_TakeInputEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114807397317353236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,6 +267,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 400
   m_JumpForce: 400
+  m_GroundMask:
+    serializedVersion: 2
+    m_Bits: 768
   m_CheckGroundTransform: {fileID: 4228073790552622}
   m_OverlapRadius: 0.25
 --- !u!212 &212384595655814718
