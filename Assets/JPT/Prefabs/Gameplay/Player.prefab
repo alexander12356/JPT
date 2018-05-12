@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441068990154056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.053, y: 1.371, z: 0}
+  m_LocalPosition: {x: 0.053, y: 5.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742974342488246}
@@ -351,7 +351,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: JPT.Gameplay.TakeObjectClasses.TakeObjectController+TakenEvent, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_ThrowForce: {x: 500, y: 150}
+  m_ThrowForce: {x: 1600, y: 400}
   m_CheckTakenTransform: {fileID: 4276310944951150}
   m_Radius: 2.35
   m_Mask:

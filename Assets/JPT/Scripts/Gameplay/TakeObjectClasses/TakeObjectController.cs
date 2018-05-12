@@ -47,14 +47,32 @@ namespace JPT.Gameplay.TakeObjectClasses
             {
                 for (int i = 0; i < m_CanTakeTags.Length; i++)
                 {
-                    if (m_TakenObject.CompareTag(m_CanTakeTags[i]))
+                    if (!m_TakenObject.CompareTag(m_CanTakeTags[i]))
                     {
-                        m_IsTaken = true;
-                        m_TakenEvent?.Invoke(m_TakenObject);
-
-                        m_TakenObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                        break;
+                        continue;
                     }
+
+                    
+
+                    var origin = m_TakenObject.bounds.center + (Vector3.up * m_TakenObject.bounds.size.y / 2) + (Vector3.up * 0.05f);
+                    //var dest = origin + Vector3.up;
+                    //Debug.DrawLine(origin, dest, Color.yellow, 3f);
+
+                    var raycastHit2D = Physics2D.Raycast(origin, Vector2.up, 1f);
+
+                    print(raycastHit2D.collider?.gameObject.name);
+                    if (raycastHit2D)
+                    {
+                        continue;
+                    }
+
+                    m_IsTaken = true;
+                    m_TakenEvent?.Invoke(m_TakenObject);
+
+                    m_TakenObject.enabled = false;
+                    m_TakenObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                    m_TakenObject.transform.eulerAngles = Vector3.zero;
+                    break;
                 }
             }
         }
@@ -62,6 +80,7 @@ namespace JPT.Gameplay.TakeObjectClasses
         public void Throw()
         {
             m_TakenObject.transform.SetParent(null);
+            m_TakenObject.enabled = true;
 
             var takenObjectRigidBody = m_TakenObject.GetComponent<Rigidbody2D>();
 
