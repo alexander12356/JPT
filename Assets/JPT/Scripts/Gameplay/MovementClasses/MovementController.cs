@@ -5,6 +5,7 @@ namespace JPT.Gameplay.MovementClasses
     public class MovementController : MonoBehaviour
     {
         private Rigidbody2D m_Rigidbody2D = null;
+        private Vector2 m_Velocity = Vector2.zero;
 
         [SerializeField] private float m_Speed = 0f;
         [SerializeField] private float m_JumpForce = 0f;
@@ -21,7 +22,7 @@ namespace JPT.Gameplay.MovementClasses
 
         public void MoveHorizontal(float value)
         {
-            var velocity = new Vector2(value * m_Speed * Time.fixedDeltaTime, m_Rigidbody2D.velocity.y);
+            m_Velocity = new Vector2(value * m_Speed * Time.fixedDeltaTime, m_Rigidbody2D.velocity.y);
 
             if (value < 0)
             {
@@ -31,8 +32,6 @@ namespace JPT.Gameplay.MovementClasses
             {
                 transform.localScale = Vector3.one;
             }
-
-            m_Rigidbody2D.velocity = velocity;
         }
 
         public void Jump()
@@ -47,6 +46,11 @@ namespace JPT.Gameplay.MovementClasses
             m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
 
             Debug.Log("GAME_LOG: player jump");
+        }
+
+        public void FixedUpdate()
+        {
+            m_Rigidbody2D.velocity = m_Velocity;
         }
     }
 }
