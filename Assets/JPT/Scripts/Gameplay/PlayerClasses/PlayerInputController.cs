@@ -14,6 +14,7 @@ namespace JPT.Gameplay.PlayerClasses
 
         [SerializeField] private HorizontalInputEvent m_HorizontalInputEvent = null;
         [SerializeField] private UnityEvent m_JumpInputEvent = null;
+        [SerializeField] private UnityEvent m_FireInputEvent = null;
 
         private void Update()
         {
@@ -25,6 +26,12 @@ namespace JPT.Gameplay.PlayerClasses
             {
                 m_JumpInputEvent.Invoke();
                 Debug.Log("GAME_LOG: Pushed jump button");
+            }
+
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+            {
+                m_FireInputEvent.Invoke();
+                print("GAME_LOG: Pushed fire1 button");
             }
         }
     }
