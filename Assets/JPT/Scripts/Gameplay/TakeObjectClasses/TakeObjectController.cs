@@ -9,14 +9,14 @@ namespace JPT.Gameplay.TakeObjectClasses
     {
         [Serializable] public class TakenEvent : UnityEvent<Collider2D> { }
 
+        private Collider2D[] m_TakenObjects = null;
+
         [SerializeField] private bool m_IsTaken = false;
-        [SerializeField] private Collider2D m_TakenObject = null;
         [SerializeField] private TakenEvent m_TakenEvent = null;
         [SerializeField] private Vector2 m_ThrowForce = Vector2.zero;
 
         [Space]
-        [SerializeField] private Transform m_CheckTakenTransform = null;
-        [SerializeField] private float m_Radius = 0f;
+        [SerializeField] private CircleCollider2D m_Settings = null;
 
         [SerializeField] private LayerMask m_Mask = -1;
         [SerializeField] private string[] m_CanTakeTags = null;
@@ -34,6 +34,11 @@ namespace JPT.Gameplay.TakeObjectClasses
             }
         }
 
+        private void Awake()
+        {
+            m_TakenObjects = new Collider2D[10];
+        }
+
         public void TryTake()
         {
             if (m_IsTaken)
@@ -41,24 +46,27 @@ namespace JPT.Gameplay.TakeObjectClasses
                 return;
             }
 
-            m_TakenObject = Physics2D.OverlapCircle(m_CheckTakenTransform.position, m_Radius, m_Mask);
+            Physics2D.OverlapCircleNonAlloc(m_Settings.gameObject.transform.position, m_Settings.radius, m_TakenObjects, m_Mask);
+            Array.Sort(m_TakenObjects, (x, y) =>
+            {
+                if (!x || !y)
+                {
+                    return 0;
+                }
+                return x.transform.position.y.CompareTo(y.transform.position.y) * -1;
+            });
 
-            if (m_TakenObject != null)
+            if (m_TakenObjects[0] != null)
             {
                 for (int i = 0; i < m_CanTakeTags.Length; i++)
                 {
-                    if (!m_TakenObject.CompareTag(m_CanTakeTags[i]))
+                    if (!m_TakenObjects[0].CompareTag(m_CanTakeTags[i]))
                     {
                         continue;
                     }
 
-                    
-
-                    var origin = m_TakenObject.bounds.center + (Vector3.up * m_TakenObject.bounds.size.y / 2) + (Vector3.up * 0.05f);
-                    //var dest = origin + Vector3.up;
-                    //Debug.DrawLine(origin, dest, Color.yellow, 3f);
-
-                    var raycastHit2D = Physics2D.Raycast(origin, Vector2.up, 1f);
+                    var origin = m_TakenObjects[0].bounds.center + (Vector3.up * m_TakenObjects[0].bounds.size.y / 2) + (Vector3.up * 0.05f);
+                    var raycastHit2D = Physics2D.Raycast(origin, Vector2.up, 1f, m_Mask);
 
                     print(raycastHit2D.collider?.gameObject.name);
                     if (raycastHit2D)
@@ -67,11 +75,11 @@ namespace JPT.Gameplay.TakeObjectClasses
                     }
 
                     m_IsTaken = true;
-                    m_TakenEvent?.Invoke(m_TakenObject);
+                    m_TakenEvent?.Invoke(m_TakenObjects[0]);
 
-                    m_TakenObject.enabled = false;
-                    m_TakenObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                    m_TakenObject.transform.eulerAngles = Vector3.zero;
+                    m_TakenObjects[0].enabled = false;
+                    m_TakenObjects[0].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                    m_TakenObjects[0].transform.eulerAngles = Vector3.zero;
                     break;
                 }
             }
@@ -79,15 +87,15 @@ namespace JPT.Gameplay.TakeObjectClasses
 
         public void Throw()
         {
-            m_TakenObject.transform.SetParent(null);
-            m_TakenObject.enabled = true;
+            m_TakenObjects[0].transform.SetParent(null);
+            m_TakenObjects[0].enabled = true;
 
-            var takenObjectRigidBody = m_TakenObject.GetComponent<Rigidbody2D>();
+            var takenObjectRigidBody = m_TakenObjects[0].GetComponent<Rigidbody2D>();
 
             takenObjectRigidBody.bodyType = RigidbodyType2D.Dynamic;
             takenObjectRigidBody?.AddForce(transform.localScale.x * m_ThrowForce);
 
-            m_TakenObject = null;
+            m_TakenObjects[0] = null;
             m_IsTaken = false;
         }
     }

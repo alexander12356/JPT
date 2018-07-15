@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1567526656866302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.61, z: 0}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742974342488246}
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1948525715806700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.33, y: 0, z: 0}
+  m_LocalPosition: {x: 0.76, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742974342488246}
@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441068990154056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.053, y: 5.66, z: 0}
+  m_LocalPosition: {x: 0.053, y: 1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742974342488246}
@@ -172,7 +172,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.35
+  m_Radius: 1
 --- !u!58 &58859294630489678
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -187,7 +187,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.369709
+  m_Radius: 0.6
 --- !u!70 &70033375231201874
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -201,7 +201,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.6, y: 5.1}
+  m_Size: {x: 1, y: 2}
   m_Direction: 0
 --- !u!114 &114281862039378722
 MonoBehaviour:
@@ -334,7 +334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsTaken: 0
-  m_TakenObject: {fileID: 0}
   m_TakenEvent:
     m_PersistentCalls:
       m_Calls:
@@ -352,8 +351,7 @@ MonoBehaviour:
     m_TypeName: JPT.Gameplay.TakeObjectClasses.TakeObjectController+TakenEvent, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_ThrowForce: {x: 1600, y: 400}
-  m_CheckTakenTransform: {fileID: 4276310944951150}
-  m_Radius: 2.35
+  m_Settings: {fileID: 58227959525560110}
   m_Mask:
     serializedVersion: 2
     m_Bits: 512
