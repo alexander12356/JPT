@@ -29,6 +29,9 @@ GameObject:
   - component: {fileID: 114643740045262344}
   - component: {fileID: 114281862039378722}
   - component: {fileID: 114442058388135760}
+  - component: {fileID: 114187645317457168}
+  - component: {fileID: 114566644926178410}
+  - component: {fileID: 114754411204962068}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -203,6 +206,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &114187645317457168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cfac69cf9f14d48812bd8b83bba23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Settings: {fileID: 58227959525560110}
+  m_TargetLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_TargetsTag:
+  - Box
 --- !u!114 &114281862039378722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,14 +259,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa08a1f7571ab242b0bacf7430be5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttackValue: 1
-  m_TargetLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  m_TargetsTag:
-  - Box
-  m_CheckAttackTransform: {fileID: 4276310944951150}
-  m_Radius: 2.35
+  m_AttackValue: 0
+  m_OnAttacked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114566644926178410}
+        m_MethodName: AddForce
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114754411204962068}
+        m_MethodName: Activate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114566644926178410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f43aaf0ca505c54d8ea927c348a88e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Force: 1000
 --- !u!114 &114602481339208824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,6 +409,17 @@ MonoBehaviour:
     m_Bits: 512
   m_CanTakeTags:
   - Box
+--- !u!114 &114754411204962068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eea3c6f1147f3f4da7b335834718979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114807397317353236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -410,8 +473,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7349be58247dc7d4285bb79add76ca13, type: 3}
-  m_Color: {r: 0, g: 0.25371575, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 19c5145097a83cb4b9411d338580b653, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

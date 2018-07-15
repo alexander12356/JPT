@@ -1,33 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace JPT.Gameplay.AttackClasses
 {
+    [Serializable] public class AttackedUnityEvent : UnityEvent<Damager, Damageable> { }
+
     public class Damager : MonoBehaviour
     {
-        private Collider2D[] m_AttackedTargetsArray = new Collider2D[20];
+        private Damageable[] m_AttackedTargets = null;
+        private BaseDamageableDetector m_DetectDamageableController = null;
 
         [SerializeField] private float m_AttackValue = 1f;
-        [SerializeField] private LayerMask m_TargetLayers = -1;
-        [SerializeField] private string[] m_TargetsTag = null;
+        [SerializeField] private AttackedUnityEvent m_OnAttacked = null;
 
-        [Space]
-        [SerializeField] private Transform m_CheckAttackTransform = null;
-        [SerializeField] private float m_Radius = 0f;
+        private void Awake()
+        {
+            m_DetectDamageableController = GetComponent<BaseDamageableDetector>();
+        }
 
         public void Attack()
         {
-            var targetsCount = Physics2D.OverlapCircleNonAlloc(m_CheckAttackTransform.position, m_Radius, m_AttackedTargetsArray, m_TargetLayers);
-            for (int i = 0; i < targetsCount; i++)
+            m_AttackedTargets = m_DetectDamageableController.DetectDamageable();
+            for (int i = 0; i < m_AttackedTargets.Length; i++)
             {
-                for (int j = 0; j < m_TargetsTag.Length; j++)
-                {
-                    if (m_AttackedTargetsArray[i].CompareTag(m_TargetsTag[j]))
-                    {
-                        m_AttackedTargetsArray[i].GetComponent<Damageable>()?.Damage(m_AttackValue);
-                    }
-                }
+                m_AttackedTargets[i].Damage(this, m_AttackValue);
+                m_OnAttacked?.Invoke(this, m_AttackedTargets[i]);
             }
         }
     }
