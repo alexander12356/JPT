@@ -135,6 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DamageValue: 1
   m_Damageable: {fileID: 114908675113903242}
+  m_IgnoredObjectTags:
+  - Player
 --- !u!114 &114908675113903242
 MonoBehaviour:
   m_ObjectHideFlags: 1

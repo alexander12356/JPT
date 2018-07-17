@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 114442058388135760}
   - component: {fileID: 114187645317457168}
   - component: {fileID: 114566644926178410}
-  - component: {fileID: 114754411204962068}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1947,17 +1946,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114754411204962068}
-        m_MethodName: Activate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114495568097834198
@@ -2291,17 +2279,6 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4923755813248924}
---- !u!114 &114754411204962068
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191494171492084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eea3c6f1147f3f4da7b335834718979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114792990356688920
 MonoBehaviour:
   m_ObjectHideFlags: 1
