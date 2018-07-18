@@ -490,6 +490,11 @@ Prefab:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114908675113903242, guid: d5326b2628ba50c4280c3934efe80db4,
+        type: 2}
+      propertyPath: m_IsGodMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5326b2628ba50c4280c3934efe80db4, type: 2}
   m_IsPrefabParent: 0
