@@ -43,6 +43,7 @@ namespace JPT.Gameplay.TakeObjectClasses
         {
             if (m_IsTaken)
             {
+                Throw();
                 return;
             }
 
