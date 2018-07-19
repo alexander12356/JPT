@@ -22,11 +22,6 @@ namespace JPT.Gameplay.PlayerClasses
 
             m_HorizontalInputEvent?.Invoke(axisValue);
 
-            if (CrossPlatformInputManager.GetButtonDown("Jump"))
-            {
-                m_JumpInputEvent.Invoke();
-            }
-
             if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 m_FireInputEvent.Invoke();
@@ -35,6 +30,14 @@ namespace JPT.Gameplay.PlayerClasses
             if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 m_TakeInputEvent?.Invoke();
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (CrossPlatformInputManager.GetButtonDown("Jump"))
+            {
+                m_JumpInputEvent.Invoke();
             }
         }
     }

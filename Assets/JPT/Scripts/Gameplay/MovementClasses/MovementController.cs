@@ -9,11 +9,11 @@ namespace JPT.Gameplay.MovementClasses
 
         [SerializeField] private float m_Speed = 0f;
         [SerializeField] private float m_JumpForce = 0f;
+        [SerializeField] private bool m_InfinityJump = false;
 
         [Space]
         [SerializeField] private LayerMask m_GroundMask = -1;
-        [SerializeField] private Transform m_CheckGroundTransform = null;
-        [SerializeField] private float m_OverlapRadius = 0f;
+        [SerializeField] private CircleCollider2D m_CheckGroundSettings = null;
 
         private void Awake()
         {
@@ -36,13 +36,14 @@ namespace JPT.Gameplay.MovementClasses
 
         public void Jump()
         {
-            var overlappedCollider = Physics2D.OverlapCircle(m_CheckGroundTransform.position, m_OverlapRadius, m_GroundMask);
-            if (!overlappedCollider)
+            var overlappedCollider = Physics2D.OverlapCircle(m_CheckGroundSettings.transform.position, m_CheckGroundSettings.radius, m_GroundMask);
+            if (!m_InfinityJump && !overlappedCollider)
             {
                 return;
             }
 
-            m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0.0f);
+            m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce, ForceMode2D.Force);
         }
 
         public void FixedUpdate()
