@@ -30,7 +30,7 @@ namespace JPT.Gameplay.MovementClasses
 
         public void MoveHorizontal(float value)
         {
-            m_Velocity = new Vector2(value * m_Speed * Time.fixedDeltaTime, m_Rigidbody2D.velocity.y);
+            m_Velocity = new Vector2(value * m_Speed, m_Rigidbody2D.velocity.y);
 
             if (value < 0)
             {
