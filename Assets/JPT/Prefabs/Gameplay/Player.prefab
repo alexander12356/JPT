@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea30478546d54097c242c14ac0841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TakenObjectPlace: {fileID: 4938792002089942}
+  m_TakenObjectPlace: {fileID: 4546333796395554}
 --- !u!114 &114315700525983524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2214,9 +2214,41 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 95358262584881728}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Take
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: JPT.Gameplay.TakeObjectClasses.TakeObjectController+TakenEvent, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_ThrowForce: {x: 1600, y: 400}
+  m_OnTakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnThrowEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95358262584881728}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Throw
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Settings: {fileID: 58227959525560110}
   m_Mask:
     serializedVersion: 2
@@ -2615,7 +2647,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43051304918988528, guid: 730341e269c6c354ab627bfef8487ba8, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4330427338229942}
   m_BlendShapeWeights: []
@@ -2663,7 +2695,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43993006210116440, guid: 7e3d7a878b4b31645b19d0116cff60bd, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4679233102143906}
   - {fileID: 4657141277853748}
@@ -2712,7 +2744,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43797666891586070, guid: bdbde34092ff4f14188a780a86c1b1b8, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4316787253982726}
   m_BlendShapeWeights: []
@@ -2760,7 +2792,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43845088084753408, guid: 6164bdead1c32e34bb2539ba8ac1c07c, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4923755813248924}
   m_BlendShapeWeights: []
@@ -2808,7 +2840,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43280130950134722, guid: f2d5a0a6300ed6544a2a0ed36f2c7b1d, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4059572796213818}
   - {fileID: 4464876689976460}
@@ -2857,7 +2889,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43791553258500182, guid: 57787ff97c49c854baa67613c3dc60ee, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4906442802897552}
   m_BlendShapeWeights: []
@@ -2905,7 +2937,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43460085498627258, guid: 67dc47bc962b5944aa2a93fd803c9835, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4054206965035670}
   m_BlendShapeWeights: []
@@ -2953,7 +2985,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43964107399026074, guid: f83b3bc72ca662240a2de7b300b275ac, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4546333796395554}
   m_BlendShapeWeights: []
@@ -3001,7 +3033,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43839686396425652, guid: ce2a8cbd4a6804449a69edee2e87a436, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4838340207049478}
   m_BlendShapeWeights: []
@@ -3049,7 +3081,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43816493028278986, guid: 68451f7e263575e43b8c12ed6818f360, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4889501258015922}
   - {fileID: 4930235812763680}
@@ -3098,7 +3130,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43522296349308184, guid: 28b2c1a808536b24fb97cce11add9b75, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4728245666532558}
   - {fileID: 4217349609820936}
@@ -3147,7 +3179,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43372939154873176, guid: a1f38451e2a06e140bcc7a59c85697ac, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4190382816371908}
   - {fileID: 4288272072427594}
@@ -3196,7 +3228,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43559314691840940, guid: 03a56c11c911e534982280c08243f567, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4148472167571076}
   m_BlendShapeWeights: []

@@ -12,8 +12,9 @@ namespace JPT.Gameplay.TakeObjectClasses
         private Collider2D[] m_TakenObjects = null;
 
         [SerializeField] private bool m_IsTaken = false;
-        [SerializeField] private TakenEvent m_TakenEvent = null;
         [SerializeField] private Vector2 m_ThrowForce = Vector2.zero;
+        [SerializeField] private TakenEvent m_TakenEvent = null;
+        [SerializeField] private UnityEvent m_OnThrowEvent = null;
 
         [Space]
         [SerializeField] private CircleCollider2D m_Settings = null;
@@ -98,6 +99,8 @@ namespace JPT.Gameplay.TakeObjectClasses
 
             m_TakenObjects[0] = null;
             m_IsTaken = false;
+
+            m_OnThrowEvent?.Invoke();
         }
     }
 }
