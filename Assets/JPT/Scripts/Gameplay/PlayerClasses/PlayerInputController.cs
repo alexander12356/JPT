@@ -31,10 +31,7 @@ namespace JPT.Gameplay.PlayerClasses
             {
                 m_TakeInputEvent?.Invoke();
             }
-        }
 
-        private void FixedUpdate()
-        {
             if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 m_JumpInputEvent.Invoke();

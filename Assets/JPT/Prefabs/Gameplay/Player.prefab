@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_Length: 0.060000457
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4657141277853748}
-  m_AttachedIK: {fileID: 114102569004752284}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114049686341184494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_Length: 0.060000297
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4930235812763680}
-  m_AttachedIK: {fileID: 114060409565696144}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114060409565696144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_Length: 0.09006931
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4316787253982726}
-  m_AttachedIK: {fileID: 114102569004752284}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114192047173169922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_Length: 0.13000071
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4217349609820936}
-  m_AttachedIK: {fileID: 114174296455663848}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114281862039378722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Length: 0.07
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
-  m_AttachedIK: {fileID: 114974258038882698}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114360531302607422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_Length: 0.05
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
-  m_AttachedIK: {fileID: 114123710174260676}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114558843106526014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2187,7 +2187,7 @@ MonoBehaviour:
   m_Length: 0.131753
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4546333796395554}
-  m_AttachedIK: {fileID: 114174296455663848}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114643740045262344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_Length: 0.09000006
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4054206965035670}
-  m_AttachedIK: {fileID: 114060409565696144}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114697606786358406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2286,7 +2286,7 @@ MonoBehaviour:
   m_Length: 0.05
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
-  m_AttachedIK: {fileID: 114820112383230986}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114716781740914952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2322,7 +2322,7 @@ MonoBehaviour:
   m_Length: 0.12769547
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4838340207049478}
-  m_AttachedIK: {fileID: 114444741126102384}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114807397317353236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2368,6 +2368,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnLanding:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_GroundMask:
     serializedVersion: 2
@@ -2500,7 +2505,7 @@ MonoBehaviour:
   m_Length: 0.13000003
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4288272072427594}
-  m_AttachedIK: {fileID: 114444741126102384}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114937881221525640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2516,7 +2521,7 @@ MonoBehaviour:
   m_Length: 0.07
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
-  m_AttachedIK: {fileID: 114196307888134332}
+  m_AttachedIK: {fileID: 0}
 --- !u!114 &114974258038882698
 MonoBehaviour:
   m_ObjectHideFlags: 1
