@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: McMondoTorso
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: CheckGround
+    m_Weight: 0
+  - m_Path: CheckAttack
+    m_Weight: 0
+  - m_Path: TakenObjectPlace
+    m_Weight: 0
+  - m_Path: HeroTorso
+    m_Weight: 0
+  - m_Path: HeroBase
+    m_Weight: 0
+  - m_Path: HeroHead
+    m_Weight: 0
+  - m_Path: HeroEyeNormal
+    m_Weight: 0
+  - m_Path: HeroHat
+    m_Weight: 0
+  - m_Path: HeroFirstArm
+    m_Weight: 0
+  - m_Path: HeroFirstHand1
+    m_Weight: 0
+  - m_Path: HeroLeg
+    m_Weight: 0
+  - m_Path: HeroBoot
+    m_Weight: 0
+  - m_Path: HeroLBoot
+    m_Weight: 0
+  - m_Path: HeroLLeg
+    m_Weight: 0
+  - m_Path: HeroSecondArm
+    m_Weight: 0
+  - m_Path: HeroSecondHand1
+    m_Weight: 0
+  - m_Path: Bones
+    m_Weight: 1
+  - m_Path: Bones/base
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/Head
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/Head/Hat
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/Head/Eye
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/RArm1
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/RArm1/RArm2
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/RArm1/RArm2/Rhand
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/LArm1
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/LArm1/LArm2
+    m_Weight: 1
+  - m_Path: Bones/base/Torso1/Torso2/LArm1/LArm2/Lhand
+    m_Weight: 1
+  - m_Path: Bones/base/RLeg1
+    m_Weight: 0
+  - m_Path: Bones/base/RLeg1/RLeg2
+    m_Weight: 0
+  - m_Path: Bones/base/RLeg1/RLeg2/Rboot1
+    m_Weight: 0
+  - m_Path: Bones/base/LLeg1
+    m_Weight: 0
+  - m_Path: Bones/base/LLeg1/LLeg2
+    m_Weight: 0
+  - m_Path: Bones/base/LLeg1/LLeg2/Lboot1
+    m_Weight: 0
+  - m_Path: Bones/IK
+    m_Weight: 0
+  - m_Path: Bones/IK/RArm
+    m_Weight: 0
+  - m_Path: Bones/IK/RArm/RHand
+    m_Weight: 0
+  - m_Path: Bones/IK/LArm
+    m_Weight: 0
+  - m_Path: Bones/IK/LArm/LHand
+    m_Weight: 0
+  - m_Path: Bones/IK/RLeg
+    m_Weight: 0
+  - m_Path: Bones/IK/RLeg/RBoot
+    m_Weight: 0
+  - m_Path: Bones/IK/LLeg
+    m_Weight: 0
+  - m_Path: Bones/IK/LLeg/LBoot
+    m_Weight: 0

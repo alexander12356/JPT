@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 114442058388135760}
   - component: {fileID: 114187645317457168}
   - component: {fileID: 114566644926178410}
+  - component: {fileID: 114373351146102978}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1854,6 +1855,17 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4330427338229942}
+--- !u!114 &114373351146102978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464c1775cd691cd4f8f0dabe916138db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114442058388135760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1932,7 +1944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AttackValue: 0
-  m_OnAttacked:
+  m_OnHit:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114566644926178410}
@@ -1947,6 +1959,22 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114373351146102978}
+        m_MethodName: PlayPunchAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114495568097834198
 MonoBehaviour:
@@ -2309,6 +2337,38 @@ MonoBehaviour:
   m_Speed: 700
   m_JumpForce: 800
   m_InfinityJump: 0
+  m_OnMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114373351146102978}
+        m_MethodName: PlayMovingAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnJumping:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114373351146102978}
+        m_MethodName: PlayJumpAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_GroundMask:
     serializedVersion: 2
     m_Bits: 768

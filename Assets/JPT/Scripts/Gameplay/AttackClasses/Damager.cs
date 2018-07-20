@@ -13,7 +13,8 @@ namespace JPT.Gameplay.AttackClasses
         private BaseDamageableDetector m_DetectDamageableController = null;
 
         [SerializeField] private float m_AttackValue = 1f;
-        [SerializeField] private AttackedUnityEvent m_OnAttacked = null;
+        [SerializeField] private AttackedUnityEvent m_OnHit = null;
+        [SerializeField] private UnityEvent m_OnAttack = null;
 
         private void Awake()
         {
@@ -23,10 +24,11 @@ namespace JPT.Gameplay.AttackClasses
         public void Attack()
         {
             m_AttackedTargets = m_DetectDamageableController.DetectDamageable();
+            m_OnAttack?.Invoke();
             for (int i = 0; i < m_AttackedTargets.Length; i++)
             {
                 m_AttackedTargets[i].Damage(this, m_AttackValue);
-                m_OnAttacked?.Invoke(this, m_AttackedTargets[i]);
+                m_OnHit?.Invoke(this, m_AttackedTargets[i]);
             }
         }
     }
