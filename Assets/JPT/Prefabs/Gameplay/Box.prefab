@@ -75,7 +75,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1511028295842508}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d36200f6a0c06af46b38e09f4db14d8a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  m_IsGodMode: 0
 --- !u!212 &212284240139695494
 SpriteRenderer:
   m_ObjectHideFlags: 1
