@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114761698428397578}
   - component: {fileID: 114182898155436188}
   m_Layer: 9
-  m_Name: Box
+  m_Name: Box_indestructible
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511028295842508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.55, y: -47.22, z: -0.03926787}
+  m_LocalPosition: {x: -80.2, y: -47.11, z: -0.03926787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsGodMode: 0
+  m_IsGodMode: 1
 --- !u!212 &212284240139695494
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -201,7 +201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62f37d29ef0b51549b1ac0ebe46409c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42eeacc6d2a6e984fa33690c4459d305, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
