@@ -1680,6 +1680,7 @@ MonoBehaviour:
     m_Bits: 512
   m_TargetsTag:
   - Box
+  - Enemy_gun
 --- !u!114 &114189922227591012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2250,6 +2251,7 @@ MonoBehaviour:
     m_Bits: 512
   m_CanTakeTags:
   - Box
+  - Enemy_gun
 --- !u!114 &114666472975096484
 MonoBehaviour:
   m_ObjectHideFlags: 1

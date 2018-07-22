@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 50835617899690676}
   - component: {fileID: 247800623605595800}
   - component: {fileID: 114908675113903242}
-  - component: {fileID: 114761698428397578}
   - component: {fileID: 114182898155436188}
   m_Layer: 9
   m_Name: Box_indestructible
@@ -41,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511028295842508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80.2, y: -47.11, z: -0.03926787}
+  m_LocalPosition: {x: -66.52, y: -47.11, z: -0.03926787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,21 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TimeBeforeDestroy: 1
---- !u!114 &114761698428397578
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1511028295842508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7528d5480ca8f0c46af04833a68f380c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DamageValue: 1
-  m_Damageable: {fileID: 114908675113903242}
-  m_IgnoredObjectTags:
-  - Player
 --- !u!114 &114908675113903242
 MonoBehaviour:
   m_ObjectHideFlags: 1
