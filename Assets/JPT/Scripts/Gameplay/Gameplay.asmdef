@@ -1,0 +1,11 @@
+{
+    "name": "Gameplay",
+    "references": [
+        "Core",
+        "StandartAssets"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
