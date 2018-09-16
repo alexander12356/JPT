@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 114187645317457168}
   - component: {fileID: 114566644926178410}
   - component: {fileID: 114373351146102978}
+  - component: {fileID: 114947057055122098}
+  - component: {fileID: 114505752763875616}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1959,7 +1961,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Gameplay, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_OnAttack:
     m_PersistentCalls:
@@ -1997,6 +1999,24 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4546333796395554}
+--- !u!114 &114505752763875616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5213e7c31c9044dbd98d48ba81dc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Health: 1
+  m_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: JPT.Gameplay.AttackClasses.AttackedUnityEvent, Gameplay, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsGodMode: 0
 --- !u!114 &114514450896925468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2104,7 +2124,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: JPT.Gameplay.PlayerClasses.PlayerInputController+HorizontalInputEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      Gameplay, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_JumpInputEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2227,7 +2247,7 @@ MonoBehaviour:
           m_StringArgument: Take
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: JPT.Gameplay.TakeObjectClasses.TakeObjectController+TakenEvent, Assembly-CSharp,
+    m_TypeName: JPT.Gameplay.TakeObjectClasses.TakeObjectController+TakenEvent, Gameplay,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_OnThrowEvent:
     m_PersistentCalls:
@@ -2380,7 +2400,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Gameplay, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_OnJumping:
     m_PersistentCalls:
@@ -2396,7 +2416,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: JPT.Gameplay.MovementClasses.BoolUnityEvent, Gameplay, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_OnLanding:
     m_PersistentCalls:
@@ -2551,6 +2571,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114947057055122098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191494171492084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6653404f3b56268438a45f2888dca91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Data: {fileID: 11400000, guid: 52800bbbc0fa2444ab13941d8d154e97, type: 2}
 --- !u!114 &114974258038882698
 MonoBehaviour:
   m_ObjectHideFlags: 1

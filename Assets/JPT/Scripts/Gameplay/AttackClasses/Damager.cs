@@ -3,6 +3,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+using JPT.Gameplay.DataClasses;
+
 namespace JPT.Gameplay.AttackClasses
 {
     [Serializable] public class AttackedUnityEvent : UnityEvent<Damager, Damageable> { }
@@ -19,6 +21,17 @@ namespace JPT.Gameplay.AttackClasses
         private void Awake()
         {
             m_DetectDamageableController = GetComponent<BaseDamageableDetector>();
+        }
+
+        private void Start()
+        {
+            GetComponent<DataController>()?.OnDataChanged.Subscribe(OnDataChanged);
+            GetComponent<DataController>()?.Flush(OnDataChanged);
+        }
+
+        private void OnDataChanged(ScriptableObject data)
+        {
+            m_AttackValue = ((IDamage)data).Damage;
         }
 
         public void Attack()
