@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 using JPT.Gameplay.DataClasses;
 
@@ -9,6 +10,8 @@ namespace JPT.Gameplay.AttackClasses
         [SerializeField] private float m_Health = 1f;
         [SerializeField] private AttackedUnityEvent m_OnDeath = null;
         [SerializeField] private bool m_IsGodMode = false;
+
+        public event Action OnDamaged;
 
         public void Start()
         {
@@ -31,6 +34,7 @@ namespace JPT.Gameplay.AttackClasses
             m_Health -= value;
             if (m_Health > 0)
             {
+                OnDamaged?.SafetyInvoke();
                 return;
             }
 

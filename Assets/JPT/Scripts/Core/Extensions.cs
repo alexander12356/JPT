@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace JPT
 {
@@ -8,6 +9,18 @@ namespace JPT
         {
             thisAction += action;
             return thisAction;
+        }
+
+        public static void SafetyInvoke(this Action action)
+        {
+            try
+            {
+                action.Invoke();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"{e.Message}\n{e.StackTrace}");
+            }
         }
     }
 }
