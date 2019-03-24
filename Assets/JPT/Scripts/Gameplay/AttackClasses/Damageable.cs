@@ -12,6 +12,8 @@ namespace JPT.Gameplay.AttackClasses
         [SerializeField] private bool m_IsGodMode = false;
 
         public event Action OnDamaged;
+        public bool IsDeath { get; set; } = false;
+        public event Action OnDeath;
 
         public void Start()
         {
@@ -26,7 +28,7 @@ namespace JPT.Gameplay.AttackClasses
 
         public void Damage(Damager sender, float value)
         {
-            if (m_IsGodMode)
+            if (m_IsGodMode || IsDeath)
             {
                 return;
             }
@@ -39,6 +41,8 @@ namespace JPT.Gameplay.AttackClasses
             }
 
             m_OnDeath?.Invoke(sender, this);
+            OnDeath?.Invoke();
+            IsDeath = true;
         }
     }
 }

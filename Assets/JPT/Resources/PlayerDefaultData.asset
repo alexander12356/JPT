@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466db09a08bda524e835c640800ae7d7, type: 3}
   m_Name: PlayerDefaultData
   m_EditorClassIdentifier: 
-  m_Health: 10
+  m_Health: 3
   m_Damage: 1
