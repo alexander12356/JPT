@@ -48,6 +48,14 @@ namespace JPT.Gameplay.PlayerClasses
                 }
             }
 
+            if (LevelController.Instance.IsPlayerDeath)
+            {
+                if (CrossPlatformInputManager.GetButtonDown("Restart"))
+                {
+                    LevelController.Instance.Restart();
+                }
+            }
+
             m_HorizontalInputEvent?.Invoke(axisValue);
         }
     }
