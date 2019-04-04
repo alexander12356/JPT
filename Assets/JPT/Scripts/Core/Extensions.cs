@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
+using Newtonsoft.Json;
+
 namespace JPT
 {
     public static class Extensions
@@ -21,6 +23,16 @@ namespace JPT
             {
                 Debug.LogError($"{e.Message}\n{e.StackTrace}");
             }
+        }
+
+        public static T Deserialize<T>(this string serializedString)
+        {
+            return JsonConvert.DeserializeObject<T>(serializedString);
+        }
+
+        public static string Serialize(this object deserializedObject)
+        {
+            return JsonConvert.SerializeObject(deserializedObject, Formatting.Indented);
         }
     }
 }
