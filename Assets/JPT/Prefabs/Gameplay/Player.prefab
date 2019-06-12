@@ -1814,6 +1814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TakenObjectPlace: {fileID: 4546333796395554}
+  m_Animator: {fileID: 0}
+  m_Damageable: {fileID: 0}
 --- !u!114 &114315700525983524
 MonoBehaviour:
   m_ObjectHideFlags: 1
