@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/JPT/Scenes/MainMenu.unity
+    path: Assets/JPT/Scenes/Legacy/MainMenu.unity
     guid: cce025cb5d5bd1a4fb73a435ec0ce26d
   - enabled: 1
-    path: Assets/JPT/Scenes/PlayerTest.unity
+    path: Assets/JPT/Scenes/Legacy/GameLevels/PlayerTest.unity
     guid: 176fe2edf6f0c65429add806ea1c63ac
   m_configObjects: {}
