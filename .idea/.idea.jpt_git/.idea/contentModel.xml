@@ -8,73 +8,78 @@
       <e p="Assets" t="Include">
         <e p="JPT" t="Include">
           <e p="Scripts" t="Include">
-            <e p="Core" t="Include">
-              <e p="Defenitions.cs" t="Include" />
-              <e p="Extensions.cs" t="Include" />
-            </e>
-            <e p="Data" t="Include">
-              <e p="GameData.cs" t="Include" />
-              <e p="LocalizationContainer.cs" t="Include" />
-              <e p="ProfileData.cs" t="Include" />
-            </e>
-            <e p="Gameplay" t="Include">
-              <e p="AttackClasses" t="Include">
-                <e p="BaseDamageableDetector.cs" t="Include" />
-                <e p="Damageable.cs" t="Include" />
-                <e p="Damager.cs" t="Include" />
+            <e p="Legacy" t="Include">
+              <e p="Core" t="Include">
+                <e p="Defenitions.cs" t="Include" />
+                <e p="Extensions.cs" t="Include" />
               </e>
-              <e p="Attacker.cs" t="Include" />
-              <e p="BasicActions" t="Include">
-                <e p="DamageByCollided.cs" t="Include" />
-                <e p="InZone.cs" t="Include" />
-                <e p="PunchForce.cs" t="Include" />
-                <e p="TriggerEnterDetection.cs" t="Include" />
+              <e p="Data" t="Include">
+                <e p="GameData.cs" t="Include" />
+                <e p="LocalizationContainer.cs" t="Include" />
+                <e p="ProfileData.cs" t="Include" />
               </e>
-              <e p="DamageableView.cs" t="Include" />
-              <e p="DataClasses" t="Include">
-                <e p="DataController.cs" t="Include" />
-                <e p="Interfaces" t="Include">
-                  <e p="IDamage.cs" t="Include" />
-                  <e p="IHealth.cs" t="Include" />
+              <e p="Gameplay" t="Include">
+                <e p="AttackClasses" t="Include">
+                  <e p="BaseDamageableDetector.cs" t="Include" />
+                  <e p="Damageable.cs" t="Include" />
+                  <e p="Damager.cs" t="Include" />
                 </e>
-                <e p="PlayerData.cs" t="Include" />
-              </e>
-              <e p="EnemyClasses" t="Include">
-                <e p="BoxView.cs" t="Include" />
-                <e p="ShootClasses" t="Include">
-                  <e p="Projectile.cs" t="Include" />
-                  <e p="ShootController.cs" t="Include" />
+                <e p="Attacker.cs" t="Include" />
+                <e p="BasicActions" t="Include">
+                  <e p="DamageByCollided.cs" t="Include" />
+                  <e p="InZone.cs" t="Include" />
+                  <e p="PunchForce.cs" t="Include" />
+                  <e p="TriggerEnterDetection.cs" t="Include" />
+                </e>
+                <e p="DamageableView.cs" t="Include" />
+                <e p="DataClasses" t="Include">
+                  <e p="DataController.cs" t="Include" />
+                  <e p="Interfaces" t="Include">
+                    <e p="IDamage.cs" t="Include" />
+                    <e p="IHealth.cs" t="Include" />
+                  </e>
+                  <e p="PlayerData.cs" t="Include" />
+                </e>
+                <e p="EnemyClasses" t="Include">
+                  <e p="BoxView.cs" t="Include" />
+                  <e p="ShootClasses" t="Include">
+                    <e p="Projectile.cs" t="Include" />
+                    <e p="ShootController.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="LevelControllerClasses" t="Include">
+                  <e p="LevelController.cs" t="Include" />
+                </e>
+                <e p="MovementClasses" t="Include">
+                  <e p="MovementController.cs" t="Include" />
+                </e>
+                <e p="PlayerClasses" t="Include">
+                  <e p="PlayerAttackerController.cs" t="Include" />
+                  <e p="PlayerInputController.cs" t="Include" />
+                  <e p="PlayerViewController.cs" t="Include" />
+                </e>
+                <e p="TakeObjectClasses" t="Include">
+                  <e p="TakeObjectController.cs" t="Include" />
+                </e>
+                <e p="TargetDetector.cs" t="Include" />
+                <e p="ViewClasses" t="Include">
+                  <e p="PlayerAnimationController.cs" t="Include" />
                 </e>
               </e>
-              <e p="LevelControllerClasses" t="Include">
-                <e p="LevelController.cs" t="Include" />
+              <e p="MainMenuClasses" t="Include">
+                <e p="MainMenuWindowClasses" t="Include">
+                  <e p="MainMenuWindow.cs" t="Include" />
+                </e>
+                <e p="Profile.cs" t="Include" />
+                <e p="SettingsWindowClasses" t="Include">
+                  <e p="SettingsWindow.cs" t="Include" />
+                </e>
               </e>
-              <e p="MovementClasses" t="Include">
-                <e p="MovementController.cs" t="Include" />
-              </e>
-              <e p="PlayerClasses" t="Include">
-                <e p="PlayerAttackerController.cs" t="Include" />
-                <e p="PlayerInputController.cs" t="Include" />
-                <e p="PlayerViewController.cs" t="Include" />
-              </e>
-              <e p="TakeObjectClasses" t="Include">
-                <e p="TakeObjectController.cs" t="Include" />
-              </e>
-              <e p="TargetDetector.cs" t="Include" />
-              <e p="ViewClasses" t="Include">
-                <e p="PlayerAnimationController.cs" t="Include" />
-              </e>
+              <e p="SceneRunner.cs" t="Include" />
             </e>
-            <e p="MainMenuClasses" t="Include">
-              <e p="MainMenuWindowClasses" t="Include">
-                <e p="MainMenuWindow.cs" t="Include" />
-              </e>
-              <e p="Profile.cs" t="Include" />
-              <e p="SettingsWindowClasses" t="Include">
-                <e p="SettingsWindow.cs" t="Include" />
-              </e>
+            <e p="Prototype_command" t="Include">
+              <e p="ICommand.cs" t="Include" />
             </e>
-            <e p="SceneRunner.cs" t="Include" />
           </e>
         </e>
         <e p="JsonDotNet" t="Include">
