@@ -78,7 +78,14 @@
               <e p="SceneRunner.cs" t="Include" />
             </e>
             <e p="Prototype_command" t="Include">
+              <e p="Actor.cs" t="Include" />
+              <e p="Command.cs" t="Include" />
+              <e p="CommandMemory.cs" t="Include" />
+              <e p="IActor.cs" t="Include" />
               <e p="ICommand.cs" t="Include" />
+              <e p="InputHandler.cs" t="Include" />
+              <e p="MoveLeftCommand.cs" t="Include" />
+              <e p="MoveRightCommand.cs" t="Include" />
             </e>
           </e>
         </e>

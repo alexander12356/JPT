@@ -1,11 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace JPT.Prototype.Gameplay
+﻿namespace JPT.Prototype.Gameplay
 {
+	public enum CommandType
+	{
+		None,
+		MoveRight,
+		MoveLeft
+	}
+	
 	public interface ICommand
 	{
-		void Execute();
+		CommandType CommandType { get; }
+		void Execute(IActor actor);
+		void Undo(IActor actor);
 	}
 }
